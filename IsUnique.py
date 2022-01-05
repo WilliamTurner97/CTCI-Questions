@@ -1,10 +1,17 @@
 # 1.1 Is Unique
 
-def is_unique(l):
-    for i in range(len(l) - 1):
-        for j in range(i+1,len(l)):
-            if l[i] == l[j]:
-                return False
+def is_unique(ls):
+
+    if len(ls) > 128:
+        return False
+
+    present = [False] * 128
+    for i in range(len(ls)):
+        if present[ord(ls[i])]:
+            return False
+        else:
+            present[ord(ls[i])] = True
+
     return True
 
 
