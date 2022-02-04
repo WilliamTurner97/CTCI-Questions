@@ -11,7 +11,7 @@ public class StackOfPlates {
         System.out.println(test1.pop());
         System.out.println(test1.pop());
         System.out.println(test1.pop());
-        System.out.println(test1.pop());
+        // System.out.println(test1.pop());
     }
 
     private static class StackStack{
@@ -32,10 +32,10 @@ public class StackOfPlates {
                 Stack<Object> topStack = st.pop();
                 topStack.push(O);
                 st.push(topStack);
-                setTopStackSize(topStackSize + 1);
+                topStackSize ++;
             }
             else {
-                this.setTopStackSize(0);
+                topStackSize = 0;
                 Stack<Object> topStack = new Stack<>();
                 topStack.push(O);
                 st.push(topStack);
@@ -47,11 +47,11 @@ public class StackOfPlates {
             Stack<Object> topStack = st.pop();
 
             if (topStackSize == 1) {
-                this.setTopStackSize(this.getSizeLimit());
+                topStackSize = sizeLimit;
                 return topStack.pop();
             }
             else {
-                this.setTopStackSize(this.getTopStackSize() - 1);
+                topStackSize--;
                 Object top = topStack.pop();
                 st.push(topStack);
                 return top;
