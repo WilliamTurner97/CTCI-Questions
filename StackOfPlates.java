@@ -57,17 +57,5 @@ public class StackOfPlates {
                 return top;
             }
         }
-
-        public int getSizeLimit() {
-            return sizeLimit;
-        }
-
-        public int getTopStackSize() {
-            return topStackSize;
-        }
-
-        public void setTopStackSize(int topStackSize) {
-            this.topStackSize = topStackSize;
-        }
     }
 }
