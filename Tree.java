@@ -28,10 +28,10 @@ public class Tree {
         TreeNode leftMost;
         TreeNode rightMost;
         Tree home;
-        Object value;
+        int value;
         int level;
 
-        public TreeNode(Object v, TreeNode p, Tree h){
+        public TreeNode(int v, TreeNode p, Tree h){
             home = h;
             parent = p;
             value = v;
@@ -81,7 +81,7 @@ public class Tree {
             return rightMost;
         }
 
-        public void setValue(Object value) {
+        public void setValue(int value) {
             this.value = value;
         }
 
